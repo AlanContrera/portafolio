@@ -1,112 +1,71 @@
 <!DOCTYPE html>
-<html class="dark" lang="es">
+<html lang="es" class="dark">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Alan Contreras | Portafolio de Desarrollador Backend</title>
+    <title>Alan Contreras | Desarrollador Web Full Stack</title>
+    <meta name="description"
+        content="Portafolio de Alan Contreras, desarrollador web full stack con Python, Django, React, PostgreSQL y despliegues en servidores Linux." />
+    <meta name="theme-color" content="#0E0A07" />
+    <meta property="og:title" content="Alan Contreras | Desarrollador Web Full Stack" />
+    <meta property="og:description" content="Plataformas web, APIs y despliegues en producción." />
+    <meta property="og:image" content="FOTO_PORTAFOLIO.jpg" />
+
+    <!-- Activa las animaciones solo si hay JavaScript -->
+    <script>document.documentElement.classList.add('js');</script>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
     <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet" />
 
     <!-- Íconos Material Symbols -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300..500,0..1&display=swap"
         rel="stylesheet" />
 
     <!-- Devicon - Logos de tecnologías -->
-    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" rel="stylesheet" />
 
-    <!-- Configuración de Tailwind -->
+    <!-- Configuración de Tailwind: paleta tomada de FOTO_PORTAFOLIO.jpg -->
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary-fixed-dim": "#adc6ff",
-                        "background": "#0b1326",
-                        "primary-fixed": "#d8e2ff",
-                        "tertiary-fixed-dim": "#b7c8e1",
-                        "on-secondary-fixed-variant": "#3c475a",
-                        "on-tertiary-container": "#1a2b3e",
-                        "on-secondary-container": "#aeb9d0",
-                        "surface-dim": "#0b1326",
-                        "inverse-primary": "#005ac2",
-                        "error": "#ffb4ab",
-                        "surface-variant": "#2d3449",
-                        "on-tertiary-fixed-variant": "#38485d",
-                        "tertiary-fixed": "#d3e4fe",
-                        "on-primary-fixed": "#001a42",
-                        "on-surface-variant": "#c2c6d6",
-                        "inverse-on-surface": "#283044",
-                        "on-primary": "#002e6a",
-                        "surface-container-low": "#131b2e",
-                        "on-tertiary-fixed": "#0b1c30",
-                        "on-error": "#690005",
-                        "primary-container": "#4d8eff",
-                        "secondary-container": "#3e495d",
-                        "surface-container-highest": "#2d3449",
-                        "outline-variant": "#424754",
-                        "primary": "#adc6ff",
-                        "surface-container-lowest": "#060e20",
-                        "on-tertiary": "#213145",
-                        "surface-tint": "#adc6ff",
-                        "secondary-fixed-dim": "#bcc7de",
-                        "secondary-fixed": "#d8e3fb",
-                        "on-primary-container": "#00285d",
-                        "on-error-container": "#ffdad6",
-                        "surface-container-high": "#222a3d",
-                        "outline": "#8c909f",
-                        "inverse-surface": "#dae2fd",
-                        "surface-bright": "#31394d",
-                        "surface": "#0b1326",
-                        "surface-container": "#171f33",
-                        "on-primary-fixed-variant": "#004395",
-                        "on-surface": "#dae2fd",
-                        "error-container": "#93000a",
-                        "tertiary": "#b7c8e1",
-                        "on-secondary": "#263143",
-                        "secondary": "#bcc7de",
-                        "tertiary-container": "#8292aa",
-                        "on-secondary-fixed": "#111c2d",
-                        "on-background": "#dae2fd",
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.25rem",
-                        lg: "0.5rem",
-                        xl: "0.75rem",
-                        full: "9999px",
-                    },
-                    spacing: {
-                        "container-max": "800px",
-                        "gutter": "24px",
-                        "stack-sm": "8px",
-                        "section-gap": "64px",
-                        "element-gap": "16px",
-                        "stack-md": "12px",
+                        // Fondos: el negro cálido de las esquinas de la foto
+                        "bg": "#0E0A07",
+                        "surface": "#17110C",
+                        "surface-2": "#201810",
+                        "line": "#3A2A1D",
+                        "line-strong": "#5A4130",
+                        // Acentos: el halo de luz
+                        "amber": "#F5A04A",
+                        "amber-soft": "#FFC27A",
+                        "ember": "#C2652A",
+                        "on-amber": "#1A0F06",
+                        // Texto
+                        "ink": "#F5EBDD",
+                        "ink-muted": "#C4B2A0",
+                        "ink-dim": "#9C8A78",
                     },
                     fontFamily: {
-                        "label-md": ["Inter"],
-                        "code": ["monospace"],
-                        "headline-sm": ["Space Grotesk"],
-                        "body-lg": ["Inter"],
-                        "headline-lg": ["Space Grotesk"],
-                        "body-md": ["Inter"],
-                        "headline-md": ["Space Grotesk"],
+                        display: ["'Space Grotesk'", "sans-serif"],
+                        sans: ["'IBM Plex Sans'", "system-ui", "sans-serif"],
+                        mono: ["'JetBrains Mono'", "ui-monospace", "monospace"],
                     },
-                    fontSize: {
-                        "label-md": ["12px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }],
-                        "code": ["14px", { lineHeight: "1.5", fontWeight: "400" }],
-                        "headline-sm": ["18px", { lineHeight: "1.4", fontWeight: "600" }],
-                        "body-lg": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
-                        "headline-lg": ["32px", { lineHeight: "1.2", fontWeight: "600" }],
-                        "body-md": ["14px", { lineHeight: "1.6", fontWeight: "400" }],
-                        "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "500" }],
+                    maxWidth: {
+                        "page": "1040px",
+                    },
+                    boxShadow: {
+                        "halo": "0 0 0 1px rgba(245,160,74,.35), 0 0 60px -10px rgba(245,160,74,.45)",
+                        "card": "0 1px 0 rgba(255,194,122,.04) inset, 0 20px 40px -24px rgba(0,0,0,.8)",
                     },
                 },
             },
@@ -115,676 +74,870 @@
 
     <!-- Estilos base -->
     <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+            color-scheme: dark;
+        }
+
         body {
-            background-color: #0b1326;
-            color: #dae2fd;
+            background-color: #0E0A07;
+            color: #F5EBDD;
+            -webkit-font-smoothing: antialiased;
         }
 
         .material-symbols-outlined {
             font-size: 20px;
+            line-height: 1;
+            user-select: none;
+        }
+
+        /* Resplandor ambiental, como la lámpara de la foto */
+        .ambient {
+            background:
+                radial-gradient(60rem 40rem at 70% -10%, rgba(245, 160, 74, .16), transparent 60%),
+                radial-gradient(40rem 30rem at 10% 30%, rgba(194, 101, 42, .08), transparent 60%);
+        }
+
+        /* Marco de la foto: halo circular */
+        .halo-ring {
+            background: conic-gradient(from 200deg, #C2652A, #FFC27A, #F5A04A, #C2652A);
+        }
+
+        /* Foco visible para navegación con teclado */
+        :focus-visible {
+            outline: 2px solid #FFC27A;
+            outline-offset: 3px;
+            border-radius: 6px;
+        }
+
+        /* Acordeón con altura animada */
+        .collapse-grid {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows .4s ease;
+        }
+
+        .collapse-grid[data-open="true"] {
+            grid-template-rows: 1fr;
+        }
+
+        .collapse-grid>div {
+            overflow: hidden;
+            transition: visibility .4s;
+        }
+
+        /* Cerrado: oculto también para teclado y lectores de pantalla */
+        .collapse-grid:not([data-open="true"])>div {
+            visibility: hidden;
+        }
+
+        .collapse-grid:not([data-open="true"]) {
+            border-bottom-width: 0;
+            box-shadow: none;
+        }
+
+        /* Aparición al hacer scroll (solo con JS) */
+        .js .reveal {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+
+        .js .reveal.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* Enlace activo de la navegación */
+        .nav-link[aria-current="true"] {
+            color: #F5A04A;
+        }
+
+        .nav-link[aria-current="true"]::after {
+            transform: scaleX(1);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                transition-duration: .01ms !important;
+            }
+
+            .js .reveal {
+                opacity: 1;
+                transform: none;
+            }
         }
     </style>
 </head>
 
-<body class="font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
+<body class="font-sans text-base leading-relaxed selection:bg-amber selection:text-on-amber">
+
+    <!-- Enlace para saltar al contenido -->
+    <a href="#contenido"
+        class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-amber focus:text-on-amber focus:px-4 focus:py-2 focus:rounded-lg font-medium">
+        Saltar al contenido
+    </a>
+
+    <div class="ambient fixed inset-0 -z-10 pointer-events-none" aria-hidden="true"></div>
 
     <!-- ==================== BARRA DE NAVEGACIÓN ==================== -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-[#0F172A]/90 backdrop-blur-sm border-b border-slate-800">
-        <div class="flex justify-between items-center h-16 px-6 max-w-[800px] mx-auto">
+    <header class="fixed top-0 left-0 w-full z-50 bg-bg/80 backdrop-blur-md border-b border-line/70">
+        <div class="flex justify-between items-center h-16 px-4 sm:px-6 max-w-page mx-auto">
 
             <!-- Logo -->
-            <div class="text-lg font-bold text-slate-100 tracking-tighter font-['Space_Grotesk']">
-                ACPORTAFOLIO </div>
+            <a href="#sobre-mi" class="flex items-center gap-2 font-display font-bold text-ink tracking-tight text-lg">
+                <span class="w-7 h-7 rounded-full halo-ring grid place-items-center" aria-hidden="true">
+                    <span class="w-[22px] h-[22px] rounded-full bg-bg grid place-items-center text-[11px] text-amber">AC</span>
+                </span>
+                <span>Alan<span class="text-amber">.</span></span>
+            </a>
 
             <!-- Enlaces de navegación -->
-            <nav class="hidden md:flex items-center gap-6">
-                <a class="text-slate-400 font-medium hover:text-blue-400 transition-colors duration-200 font-['Space_Grotesk'] tracking-tight"
-                    href="#experiencia">Experiencia</a>
-                <a class="text-slate-400 font-medium hover:text-blue-400 transition-colors duration-200 font-['Space_Grotesk'] tracking-tight"
-                    href="#proyectos">Proyectos</a>
-                <a class="text-slate-400 font-medium hover:text-blue-400 transition-colors duration-200 font-['Space_Grotesk'] tracking-tight"
+            <nav aria-label="Principal" class="hidden md:flex items-center gap-7">
+                <a class="nav-link relative text-ink-muted hover:text-ink transition-colors duration-200 font-display font-medium after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-full after:bg-amber after:scale-x-0 after:origin-left after:transition-transform"
+                    href="#sobre-mi">Sobre mí</a>
+                <a class="nav-link relative text-ink-muted hover:text-ink transition-colors duration-200 font-display font-medium after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-full after:bg-amber after:scale-x-0 after:origin-left after:transition-transform"
                     href="#habilidades">Habilidades</a>
-                <a class="text-blue-500 border-b-2 border-blue-500 pb-1 font-['Space_Grotesk'] tracking-tight"
-                    href="#sobre-mi">Sobre Mí</a>
+                <a class="nav-link relative text-ink-muted hover:text-ink transition-colors duration-200 font-display font-medium after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-full after:bg-amber after:scale-x-0 after:origin-left after:transition-transform"
+                    href="#experiencia">Experiencia</a>
+                <a class="nav-link relative text-ink-muted hover:text-ink transition-colors duration-200 font-display font-medium after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-full after:bg-amber after:scale-x-0 after:origin-left after:transition-transform"
+                    href="#proyectos">Proyectos</a>
+                <a class="nav-link relative text-ink-muted hover:text-ink transition-colors duration-200 font-display font-medium after:absolute after:left-0 after:-bottom-1.5 after:h-[2px] after:w-full after:bg-amber after:scale-x-0 after:origin-left after:transition-transform"
+                    href="#contacto">Contacto</a>
             </nav>
 
             <!-- Acciones -->
-            <div class="flex items-center gap-3 md:gap-4">
-                <span class="material-symbols-outlined text-blue-500 hidden sm:block"
-                    data-icon="terminal">terminal</span>
+            <div class="flex items-center gap-2">
                 <a href="CV_ALAN_CONTRERAS.pdf" download="CV_Alan_Contreras.pdf"
-                    class="bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full font-label-md text-label-md active:scale-95 transition-transform inline-block">
+                    class="hidden sm:inline-flex items-center gap-1.5 bg-amber text-on-amber px-4 h-10 rounded-full font-medium text-sm hover:bg-amber-soft active:scale-95 transition">
+                    <span class="material-symbols-outlined text-[18px]" aria-hidden="true">download</span>
                     Currículum
                 </a>
 
                 <!-- Botón Menú Hamburguesa (Solo Móvil) -->
-                <button id="menu-toggle"
-                    class="md:hidden flex items-center justify-center p-1.5 text-slate-400 hover:text-white transition-colors bg-surface-container-high rounded-lg border border-outline-variant">
-                    <span id="menu-icon" class="material-symbols-outlined" data-icon="menu">menu</span>
+                <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"
+                    aria-label="Abrir menú"
+                    class="md:hidden grid place-items-center w-11 h-11 text-ink-muted hover:text-ink transition-colors bg-surface-2 rounded-xl border border-line">
+                    <span id="menu-icon" class="material-symbols-outlined" aria-hidden="true">menu</span>
                 </button>
             </div>
-
         </div>
 
         <!-- Menú Móvil Desplegable -->
-        <nav id="mobile-menu"
-            class="md:hidden absolute top-16 left-0 w-full bg-[#0F172A]/95 backdrop-blur-md border-b border-slate-800 flex-col shadow-2xl transition-all duration-300 max-h-0 overflow-hidden opacity-0">
-            <div class="flex flex-col px-6 py-4 space-y-4">
-                <a class="text-slate-400 font-medium hover:text-blue-400 transition-colors duration-200 font-['Space_Grotesk'] tracking-tight mobile-link"
-                    href="#sobre-mi">Sobre Mí</a>
-                <a class="text-slate-400 font-medium hover:text-blue-400 transition-colors duration-200 font-['Space_Grotesk'] tracking-tight mobile-link"
-                    href="#experiencia">Experiencia</a>
-                <a class="text-slate-400 font-medium hover:text-blue-400 transition-colors duration-200 font-['Space_Grotesk'] tracking-tight mobile-link"
-                    href="#proyectos">Proyectos</a>
-                <a class="text-slate-400 font-medium hover:text-blue-400 transition-colors duration-200 font-['Space_Grotesk'] tracking-tight mobile-link"
-                    href="#habilidades">Habilidades</a>
+        <nav id="mobile-menu" aria-label="Móvil"
+            class="md:hidden collapse-grid absolute top-16 left-0 w-full bg-bg/95 backdrop-blur-md border-b border-line shadow-2xl">
+            <div>
+                <div class="flex flex-col px-4 py-3">
+                    <a class="nav-link mobile-link py-3 text-ink-muted hover:text-ink font-display font-medium border-b border-line/60"
+                        href="#sobre-mi">Sobre mí</a>
+                    <a class="nav-link mobile-link py-3 text-ink-muted hover:text-ink font-display font-medium border-b border-line/60"
+                        href="#habilidades">Habilidades</a>
+                    <a class="nav-link mobile-link py-3 text-ink-muted hover:text-ink font-display font-medium border-b border-line/60"
+                        href="#experiencia">Experiencia</a>
+                    <a class="nav-link mobile-link py-3 text-ink-muted hover:text-ink font-display font-medium border-b border-line/60"
+                        href="#proyectos">Proyectos</a>
+                    <a class="nav-link mobile-link py-3 text-ink-muted hover:text-ink font-display font-medium"
+                        href="#contacto">Contacto</a>
+                    <a href="CV_ALAN_CONTRERAS.pdf" download="CV_Alan_Contreras.pdf"
+                        class="mobile-link mt-3 mb-1 inline-flex justify-center items-center gap-2 bg-amber text-on-amber h-11 rounded-full font-medium">
+                        <span class="material-symbols-outlined" aria-hidden="true">download</span>
+                        Descargar currículum
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
 
     <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
-    <main class="max-w-[800px] mx-auto px-6 pt-32 pb-24">
+    <main id="contenido" class="max-w-page mx-auto px-4 sm:px-6 pt-28 md:pt-36 pb-24">
 
         <!-- ==================== HÉROE / PERFIL ==================== -->
-        <section class="flex flex-col md:flex-row gap-8 items-center md:items-start mb-section-gap" id="sobre-mi">
-
-            <!-- Foto de perfil -->
-            <div class="relative group">
-                <div class="w-40 h-40 rounded-xl overflow-hidden border border-outline-variant bg-surface-container">
-                    <img alt="Alan Contreras" class="w-full h-full object-cover"
-                        data-alt="retrato profesional de un desarrollador en un estudio con fondo azul oscuro"
-                        src="FOTO_PORTAFOLIO.png" />
-                </div>
-                <div
-                    class="absolute -bottom-2 -right-2 bg-primary-container p-1.5 rounded-lg border-2 border-background">
-                    <span class="material-symbols-outlined text-on-primary-container" data-icon="verified"
-                        data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
-                </div>
-            </div>
+        <section id="sobre-mi" aria-labelledby="hero-title"
+            class="grid md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-center mb-28 md:mb-36">
 
             <!-- Información del perfil -->
-            <div class="flex-1 space-y-stack-md text-center md:text-left">
+            <div class="order-2 md:order-1 text-center md:text-left">
 
-                <!-- Nombre y título -->
-                <div>
-                    <h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Alan Contreras
-                    </h1>
-                    <p class="font-headline-sm text-headline-sm text-primary-fixed-dim">Fullstack Developer Jr
-                    </p>
-                </div>
-
-                <!-- Ubicación -->
-                <div class="flex items-center justify-center md:justify-start gap-2 text-on-surface-variant">
-                    <span class="material-symbols-outlined" data-icon="location_on">location_on</span>
-                    <span class="font-label-md text-label-md">Tlalnepantla, Estado de México</span>
-                </div>
-
-                <!-- Biografía -->
-                <p class="text-body-lg font-body-lg text-on-surface-variant max-w-xl">
-                    Desarrollo APIs y sistemas backend con Python, trabajando con bases de datos y despliegues en
-                    servidores.
-                    He llevado aplicaciones a producción, lo que me permite construir soluciones reales más allá del
-                    código.
+                <p
+                    class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-amber bg-amber/10 border border-amber/25 px-3 py-1.5 rounded-full mb-6">
+                    <span class="relative flex w-2 h-2" aria-hidden="true">
+                        <span class="absolute inline-flex w-full h-full rounded-full bg-amber opacity-70 animate-ping"></span>
+                        <span class="relative inline-flex w-2 h-2 rounded-full bg-amber"></span>
+                    </span>
+                    Abierto a oportunidades
                 </p>
 
-                <!-- Botones sociales -->
-                <div class="flex flex-wrap justify-center md:justify-start gap-3 pt-4">
+                <h1 id="hero-title"
+                    class="font-display font-bold text-4xl sm:text-5xl md:text-6xl leading-[1.05] tracking-tight text-ink">
+                    Alan Contreras
+                </h1>
+                <p class="font-display text-xl sm:text-2xl text-ink-muted mt-3">
+                    Desarrollador Web Full Stack
+                </p>
 
-                    <a href="https://wa.me/525525319587" id="whatsapp-link" target="_blank" rel="noopener noreferrer"
-                        class="flex items-center gap-2 bg-surface-container-high border border-outline-variant px-4 py-2 rounded-full hover:bg-surface-variant transition-colors group cursor-pointer">
-                        <svg class="w-5 h-5 fill-primary" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
-                        </svg>
-                        <span class="font-label-md text-label-md">WhatsApp</span>
-                    </a>
-                    <button onclick="copyEmail()"
-                        class="flex items-center gap-2 bg-surface-container-high border border-outline-variant px-4 py-2 rounded-full hover:bg-surface-variant transition-colors group cursor-pointer">
-                        <span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
-                        <span class="font-label-md text-label-md">Correo</span>
-                    </button>
-                    <a href="https://github.com/AlanContrera" target="_blank" rel="noopener noreferrer"
-                        class="flex items-center gap-2 bg-surface-container-high border border-outline-variant px-4 py-2 rounded-full hover:bg-surface-variant transition-colors group cursor-pointer">
-                        <span class="material-symbols-outlined text-primary" data-icon="code">code</span>
-                        <span class="font-label-md text-label-md">GitHub</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/alan-giovanni-contreras-avila-6a70283a6" target="_blank"
-                        rel="noopener noreferrer"
-                        class="flex items-center gap-2 bg-surface-container-high border border-outline-variant px-4 py-2 rounded-full hover:bg-surface-variant transition-colors group cursor-pointer">
-                        <span class="material-symbols-outlined text-primary" data-icon="link">link</span>
-                        <span class="font-label-md text-label-md">LinkedIn</span>
-                    </a>
+                <p class="text-lg text-ink-muted max-w-xl mt-6 mx-auto md:mx-0">
+                    Ingeniero en Sistemas titulado. Desarrollo plataformas web con Python, Django y React que reemplazan
+                    procesos manuales, y las llevo a producción con Docker, Nginx y servidores Linux. También integro IA
+                    de forma práctica en sistemas reales.
+                </p>
 
+                <p class="flex items-center justify-center md:justify-start gap-1.5 text-ink-dim text-sm mt-4">
+                    <span class="material-symbols-outlined text-[18px]" aria-hidden="true">location_on</span>
+                    Tlalnepantla, Estado de México
+                </p>
+
+                <!-- Llamadas a la acción -->
+                <div class="flex flex-wrap justify-center md:justify-start gap-3 mt-8">
+                    <a href="#proyectos"
+                        class="inline-flex items-center gap-2 bg-amber text-on-amber h-12 px-6 rounded-full font-semibold hover:bg-amber-soft active:scale-95 transition shadow-[0_10px_30px_-10px_rgba(245,160,74,.6)]">
+                        Ver proyectos
+                        <span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span>
+                    </a>
+                    <a href="CV_ALAN_CONTRERAS.pdf" download="CV_Alan_Contreras.pdf"
+                        class="inline-flex items-center gap-2 h-12 px-6 rounded-full font-semibold text-ink border border-line-strong hover:border-amber hover:text-amber active:scale-95 transition">
+                        <span class="material-symbols-outlined" aria-hidden="true">download</span>
+                        Descargar CV
+                    </a>
                 </div>
 
+                <!-- Botones sociales -->
+                <ul class="flex justify-center md:justify-start gap-2 mt-6" aria-label="Redes y contacto">
+                    <li>
+                        <a href="https://github.com/AlanContrera" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub (se abre en una pestaña nueva)"
+                            class="grid place-items-center w-11 h-11 rounded-full bg-surface-2 border border-line text-ink-muted hover:text-amber hover:border-amber/60 transition">
+                            <i class="devicon-github-original text-xl" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/alan-giovanni-contreras-avila-6a70283a6" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn (se abre en una pestaña nueva)"
+                            class="grid place-items-center w-11 h-11 rounded-full bg-surface-2 border border-line text-ink-muted hover:text-amber hover:border-amber/60 transition">
+                            <i class="devicon-linkedin-plain text-lg" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/525525319587" target="_blank" rel="noopener noreferrer"
+                            aria-label="WhatsApp (se abre en una pestaña nueva)"
+                            class="grid place-items-center w-11 h-11 rounded-full bg-surface-2 border border-line text-ink-muted hover:text-amber hover:border-amber/60 transition">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <button type="button" onclick="copyEmail()" aria-label="Copiar correo electrónico"
+                            class="grid place-items-center w-11 h-11 rounded-full bg-surface-2 border border-line text-ink-muted hover:text-amber hover:border-amber/60 transition">
+                            <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Foto de perfil con halo -->
+            <div class="order-1 md:order-2 relative mx-auto">
+                <div class="absolute -inset-10 rounded-full bg-amber/20 blur-3xl" aria-hidden="true"></div>
+                <div class="relative halo-ring rounded-full p-[3px] shadow-halo">
+                    <div class="rounded-full overflow-hidden bg-surface w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80">
+                        <img alt="Retrato de Alan Contreras frente a un halo de luz ámbar"
+                            class="w-full h-full object-cover object-[50%_30%]" src="FOTO_PORTAFOLIO.jpg"
+                            width="851" height="1022" fetchpriority="high" />
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- ==================== TECNOLOGÍAS PRINCIPALES ==================== -->
-        <section class="mb-section-gap" id="habilidades">
-            <h2 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3">
-                <span class="w-8 h-[2px] bg-primary"></span> Tecnologías Principales
-            </h2>
+        <section id="habilidades" aria-labelledby="habilidades-title" class="mb-28 reveal">
+            <header class="mb-10">
+                <p class="font-mono text-xs uppercase tracking-[0.2em] text-amber mb-2">01 — Stack</p>
+                <h2 id="habilidades-title" class="font-display font-semibold text-3xl md:text-4xl tracking-tight">
+                    Tecnologías principales</h2>
+            </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Ficha técnica: una fila por categoría -->
+            <div class="bg-surface border border-line rounded-2xl divide-y divide-line overflow-hidden shadow-card">
 
-                <!-- 🔧 Backend (Tu Fuerte) -->
-                <div class="bg-surface-container border border-outline-variant rounded-xl p-5 space-y-4">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface">Backend</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <div
-                            class="flex items-center gap-2 bg-secondary-container/40 border border-secondary-container px-2.5 py-1.5 rounded-lg">
-                            <i class="devicon-python-plain colored text-lg"></i>
-                            <span class="font-label-md text-label-md text-primary-fixed">Python</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-2 bg-secondary-container/40 border border-secondary-container px-2.5 py-1.5 rounded-lg">
-                            <i class="devicon-nodejs-plain colored text-lg"></i>
-                            <span class="font-label-md text-label-md text-primary-fixed">Node.js</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-2 bg-secondary-container/40 border border-secondary-container px-2.5 py-1.5 rounded-lg">
-                            <i class="devicon-express-original text-primary-fixed-dim text-lg"></i>
-                            <span class="font-label-md text-label-md text-primary-fixed">Express</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-2 bg-secondary-container/40 border border-secondary-container px-2.5 py-1.5 rounded-lg">
-                            <i class="devicon-django-plain colored text-lg"></i>
-                            <span class="font-label-md text-label-md text-primary-fixed">Django</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-2 bg-secondary-container/40 border border-secondary-container px-2.5 py-1.5 rounded-lg">
-                            <span class="material-symbols-outlined text-primary-fixed-dim text-lg"
-                                data-icon="api">api</span>
-                            <span class="font-label-md text-label-md text-primary-fixed">APIs REST</span>
+                <!-- Backend -->
+                <div class="grid md:grid-cols-[260px_1fr] gap-4 md:gap-6 md:items-center p-5 md:px-7 md:py-6 hover:bg-surface-2/50 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="grid place-items-center w-10 h-10 rounded-xl bg-surface-2 border border-line text-amber shrink-0">
+                            <span class="material-symbols-outlined" aria-hidden="true">terminal</span>
+                        </span>
+                        <div>
+                            <h3 class="font-display font-semibold text-lg leading-tight">Backend</h3>
+                            <p class="font-mono text-xs text-ink-dim">7 tecnologías</p>
                         </div>
                     </div>
+                    <ul class="flex flex-wrap gap-2">
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <i class="devicon-python-plain colored text-lg" aria-hidden="true"></i>Python</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <i class="devicon-django-plain text-lg text-ink-muted" aria-hidden="true"></i>Django</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <span class="material-symbols-outlined text-amber" aria-hidden="true">hub</span>Django REST Framework</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <span class="material-symbols-outlined text-amber" aria-hidden="true">api</span>APIs REST</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <span class="material-symbols-outlined text-amber" aria-hidden="true">data_object</span>JSON</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <span class="material-symbols-outlined text-amber" aria-hidden="true">key</span>JWT</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <span class="material-symbols-outlined text-amber" aria-hidden="true">schedule</span>Celery</li>
+                    </ul>
                 </div>
 
-                <!-- 🗄️ Bases de Datos -->
-                <div class="bg-surface-container border border-outline-variant rounded-xl p-5 space-y-4">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-primary" data-icon="storage">storage</span>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface">Bases de Datos</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <div
-                            class="flex items-center gap-2 bg-secondary-container/40 border border-secondary-container px-3 py-1.5 rounded-lg">
-                            <i class="devicon-mysql-plain colored text-lg"></i>
-                            <span class="font-label-md text-label-md text-primary-fixed">MySQL</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-2 bg-secondary-container/40 border border-secondary-container px-3 py-1.5 rounded-lg">
-                            <i class="devicon-postgresql-plain colored text-lg"></i>
-                            <span class="font-label-md text-label-md text-primary-fixed">PostgreSQL</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-2 bg-secondary-container/40 border border-secondary-container px-3 py-1.5 rounded-lg">
-                            <i class="devicon-mongodb-plain colored text-lg"></i>
-                            <span class="font-label-md text-label-md text-primary-fixed">MongoDB</span>
+                <!-- Frontend -->
+                <div class="grid md:grid-cols-[260px_1fr] gap-4 md:gap-6 md:items-center p-5 md:px-7 md:py-6 hover:bg-surface-2/50 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="grid place-items-center w-10 h-10 rounded-xl bg-surface-2 border border-line text-amber shrink-0">
+                            <span class="material-symbols-outlined" aria-hidden="true">web</span>
+                        </span>
+                        <div>
+                            <h3 class="font-display font-semibold text-lg leading-tight">Frontend</h3>
+                            <p class="font-mono text-xs text-ink-dim">5 tecnologías</p>
                         </div>
                     </div>
+                    <ul class="flex flex-wrap gap-2">
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <i class="devicon-javascript-plain colored text-lg" aria-hidden="true"></i>JavaScript</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <i class="devicon-react-original colored text-lg" aria-hidden="true"></i>React</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <i class="devicon-vitejs-plain colored text-lg" aria-hidden="true"></i>Vite</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <i class="devicon-html5-plain colored text-lg" aria-hidden="true"></i>HTML</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <i class="devicon-css3-plain colored text-lg" aria-hidden="true"></i>CSS</li>
+                    </ul>
                 </div>
 
-                <!-- 🌐 Frontend -->
-                <div class="bg-surface-container border border-outline-variant rounded-xl p-5 space-y-4">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-primary" data-icon="web">web</span>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface">Frontend</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <div
-                            class="flex items-center gap-2 bg-secondary-container/40 border border-secondary-container px-3 py-1.5 rounded-lg">
-                            <i class="devicon-html5-plain colored text-lg"></i>
-                            <span class="font-label-md text-label-md text-primary-fixed">HTML</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-2 bg-secondary-container/40 border border-secondary-container px-3 py-1.5 rounded-lg">
-                            <i class="devicon-css3-plain colored text-lg"></i>
-                            <span class="font-label-md text-label-md text-primary-fixed">CSS</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-2 bg-secondary-container/40 border border-secondary-container px-3 py-1.5 rounded-lg">
-                            <i class="devicon-javascript-plain colored text-lg"></i>
-                            <span class="font-label-md text-label-md text-primary-fixed">JavaScript</span>
+                <!-- Bases de datos -->
+                <div class="grid md:grid-cols-[260px_1fr] gap-4 md:gap-6 md:items-center p-5 md:px-7 md:py-6 hover:bg-surface-2/50 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="grid place-items-center w-10 h-10 rounded-xl bg-surface-2 border border-line text-amber shrink-0">
+                            <span class="material-symbols-outlined" aria-hidden="true">database</span>
+                        </span>
+                        <div>
+                            <h3 class="font-display font-semibold text-lg leading-tight">Bases de datos</h3>
+                            <p class="font-mono text-xs text-ink-dim">3 tecnologías</p>
                         </div>
                     </div>
+                    <ul class="flex flex-wrap gap-2">
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <i class="devicon-mysql-plain text-lg text-ink-muted" aria-hidden="true"></i>MySQL</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <i class="devicon-postgresql-plain colored text-lg" aria-hidden="true"></i>PostgreSQL</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <i class="devicon-redis-plain colored text-lg" aria-hidden="true"></i>Redis</li>
+                    </ul>
                 </div>
 
-                <!-- ⚙️ Infra / DevOps -->
-                <div class="bg-surface-container border border-outline-variant rounded-xl p-5 space-y-4">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-primary" data-icon="settings">settings</span>
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface">Infra / DevOps</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <div
-                            class="flex items-center gap-2 bg-secondary-container/40 border border-secondary-container px-3 py-1.5 rounded-lg">
-                            <i class="devicon-linux-plain text-primary-fixed-dim text-lg"></i>
-                            <span class="font-label-md text-label-md text-primary-fixed">Linux</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-2 bg-secondary-container/40 border border-secondary-container px-3 py-1.5 rounded-lg">
-                            <span class="material-symbols-outlined text-primary-fixed-dim text-lg"
-                                data-icon="dns">dns</span>
-                            <span class="font-label-md text-label-md text-primary-fixed">VPS</span>
+                <!-- Infra / DevOps -->
+                <div class="grid md:grid-cols-[260px_1fr] gap-4 md:gap-6 md:items-center p-5 md:px-7 md:py-6 hover:bg-surface-2/50 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="grid place-items-center w-10 h-10 rounded-xl bg-surface-2 border border-line text-amber shrink-0">
+                            <span class="material-symbols-outlined" aria-hidden="true">dns</span>
+                        </span>
+                        <div>
+                            <h3 class="font-display font-semibold text-lg leading-tight">Infra / DevOps</h3>
+                            <p class="font-mono text-xs text-ink-dim">7 tecnologías</p>
                         </div>
                     </div>
+                    <ul class="flex flex-wrap gap-2">
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <i class="devicon-linux-plain text-lg text-ink-muted" aria-hidden="true"></i>Linux</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <span class="material-symbols-outlined text-amber" aria-hidden="true">cloud</span>VPS</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <i class="devicon-docker-plain colored text-lg" aria-hidden="true"></i>Docker</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <span class="material-symbols-outlined text-amber" aria-hidden="true">deployed_code</span>Docker Compose</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <i class="devicon-nginx-original colored text-lg" aria-hidden="true"></i>Nginx</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <i class="devicon-git-plain colored text-lg" aria-hidden="true"></i>Git</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <i class="devicon-github-original text-lg" aria-hidden="true"></i>GitHub</li>
+                    </ul>
                 </div>
 
+                <!-- Inteligencia artificial -->
+                <div class="grid md:grid-cols-[260px_1fr] gap-4 md:gap-6 md:items-center p-5 md:px-7 md:py-6 hover:bg-surface-2/50 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="grid place-items-center w-10 h-10 rounded-xl bg-surface-2 border border-line text-amber shrink-0">
+                            <span class="material-symbols-outlined" aria-hidden="true">hub</span>
+                        </span>
+                        <div>
+                            <h3 class="font-display font-semibold text-lg leading-tight">Inteligencia artificial</h3>
+                            <p class="font-mono text-xs text-ink-dim">5 tecnologías</p>
+                        </div>
+                    </div>
+                    <ul class="flex flex-wrap gap-2">
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <span class="material-symbols-outlined text-amber" aria-hidden="true">build</span>Tool calling</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <span class="material-symbols-outlined text-amber" aria-hidden="true">neurology</span>APIs de LLMs</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <span class="material-symbols-outlined text-amber" aria-hidden="true">memory</span>Ollama (LLMs locales)</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <span class="material-symbols-outlined text-amber" aria-hidden="true">description</span>Extracción de datos con LLMs</li>
+                        <li class="flex items-center gap-2 bg-surface-2 border border-line px-3 py-2 rounded-lg text-sm">
+                            <span class="material-symbols-outlined text-amber" aria-hidden="true">edit_note</span>Prompt engineering</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <!-- ==================== EXPERIENCIA LABORAL ==================== -->
-        <section class="mb-section-gap" id="experiencia">
-            <h2 class="font-headline-md text-headline-md text-on-surface mb-8 flex items-center gap-3">
-                <span class="w-8 h-[2px] bg-primary"></span> Trayectoria Profesional
-            </h2>
+        <section id="experiencia" aria-labelledby="experiencia-title" class="mb-28 reveal">
+            <header class="mb-10">
+                <p class="font-mono text-xs uppercase tracking-[0.2em] text-amber mb-2">02 — Experiencia</p>
+                <h2 id="experiencia-title" class="font-display font-semibold text-3xl md:text-4xl tracking-tight">
+                    Trayectoria profesional</h2>
+            </header>
 
-            <!-- 💻 Desarrollo Backend / Web -->
-            <div class="mb-10">
-                <div class="flex items-center gap-2 mb-6">
-                    <span class="material-symbols-outlined text-primary" data-icon="code">code</span>
-                    <h3 class="font-headline-sm text-headline-sm text-primary-fixed-dim">Desarrollo Backend / Web</h3>
-                </div>
+            <!-- Desarrollo Backend / Web -->
+            <ol class="relative border-l border-line ml-3 space-y-10">
+                <!-- Empleo actual -->
+                <li class="relative pl-8">
+                    <span class="absolute -left-[9px] top-2 w-[17px] h-[17px] rounded-full bg-amber ring-4 ring-amber/20"
+                        aria-hidden="true"></span>
 
-                <div
-                    class="space-y-8 relative before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[1px] before:bg-primary/30">
-
-                    <!-- Bucks Containers -->
-                    <div class="relative pl-10">
-                        <div
-                            class="absolute left-0 top-1.5 w-6 h-6 bg-primary-container border-2 border-primary rounded-full flex items-center justify-center">
-                            <span class="w-2 h-2 bg-on-primary-container rounded-full"></span>
+                    <article class="bg-surface border border-line rounded-2xl p-6 shadow-card">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-1">
+                            <div>
+                                <h3 class="font-display font-semibold text-xl">Desarrollador Web Full Stack</h3>
+                                <p class="text-amber font-medium">Partners &amp; Masters</p>
+                            </div>
+                            <time
+                                class="font-mono text-xs uppercase tracking-wider text-ink-muted bg-surface-2 border border-line px-2.5 py-1 rounded-md shrink-0 self-start">
+                                Jun 2026 — Actualidad</time>
                         </div>
-                        <div class="flex flex-col md:flex-row md:justify-between items-start mb-1">
-                            <h3 class="font-headline-sm text-headline-sm text-on-surface">Desarrollador Backend / Web
-                            </h3>
-                            <span
-                                class="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest bg-surface-container-high px-2 py-0.5 rounded">Sep
-                                2025 — Mar 2026</span>
-                        </div>
-                        <p class="font-label-md text-label-md text-primary mb-3">Bucks Containers</p>
-                        <p class="text-body-md font-body-md text-on-surface-variant mb-4">
-                            Durante mi servicio social participé en el desarrollo de una aplicación web completa bajo
-                            una arquitectura cliente-servidor, enfocándome principalmente en la lógica backend y la
-                            gestión de datos.
+                        <p class="text-ink-muted mt-3 mb-5">
+                            Único desarrollador de la empresa: diseño, desarrollo, despliego y mantengo las plataformas
+                            internas que reemplazan procesos manuales en Excel y correo. También doy soporte técnico y
+                            administro parte de la red.
                         </p>
-                        <ul class="space-y-2 text-body-md font-body-md text-on-surface-variant">
-                            <li class="flex items-start gap-2">
-                                <span class="material-symbols-outlined text-primary text-sm mt-0.5"
-                                    data-icon="check_circle">check_circle</span>
-                                Desarrollé una aplicación web funcional utilizando Python y JavaScript
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="material-symbols-outlined text-primary text-sm mt-0.5"
-                                    data-icon="check_circle">check_circle</span>
-                                Diseñé e implementé una API REST para la comunicación entre servicios
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="material-symbols-outlined text-primary text-sm mt-0.5"
-                                    data-icon="check_circle">check_circle</span>
-                                Modelé y gestioné bases de datos relacionales (MySQL y PostgreSQL)
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="material-symbols-outlined text-primary text-sm mt-0.5"
-                                    data-icon="check_circle">check_circle</span>
-                                Realicé operaciones CRUD y estructuración eficiente de datos
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="material-symbols-outlined text-primary text-sm mt-0.5"
-                                    data-icon="check_circle">check_circle</span>
-                                Desplegué la aplicación en un servidor VPS con entorno Linux en producción
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="material-symbols-outlined text-primary text-sm mt-0.5"
-                                    data-icon="check_circle">check_circle</span>
-                                Configuré el entorno del servidor para asegurar el correcto funcionamiento del sistema
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="material-symbols-outlined text-primary text-sm mt-0.5"
-                                    data-icon="check_circle">check_circle</span>
-                                Automaticé procesos mediante scripts en Python para optimizar tareas internas
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="material-symbols-outlined text-primary text-sm mt-0.5"
-                                    data-icon="check_circle">check_circle</span>
-                                Implementé soluciones backend orientadas a mejorar la eficiencia operativa
-                            </li>
+                        <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2.5 text-ink-muted text-[15px]">
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-amber text-[18px] mt-0.5"
+                                    aria-hidden="true">check</span>Desarrollé con Django y React una plataforma de cotización, facturación (CFDI 4.0) y cobranza para 10 usuarios, con cotización y prefactura en menos de 3 minutos</li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-amber text-[18px] mt-0.5"
+                                    aria-hidden="true">check</span>Eliminé el seguimiento manual de facturas con un robot IMAP en Celery que las asocia a su prefactura y avisa al operador</li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-amber text-[18px] mt-0.5"
+                                    aria-hidden="true">check</span>Integré un copiloto de IA con function calling (Gemini y Ollama local) y consultas SQL de solo lectura</li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-amber text-[18px] mt-0.5"
+                                    aria-hidden="true">check</span>Implementé la lectura automática de comprobantes de pago en PDF con LLMs multimodales</li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-amber text-[18px] mt-0.5"
+                                    aria-hidden="true">check</span>Digitalicé un Excel de reclutamiento de 41 hojas en una plataforma web (ATS) con Django y React</li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-amber text-[18px] mt-0.5"
+                                    aria-hidden="true">check</span>Desarrollé un buzón confidencial de denuncias conforme a la NOM-035, con bitácora de auditoría inmutable</li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-amber text-[18px] mt-0.5"
+                                    aria-hidden="true">check</span>Llevé las plataformas a producción en un servidor físico con Ubuntu Server, Docker Compose y Nginx</li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-amber text-[18px] mt-0.5"
+                                    aria-hidden="true">check</span>Manejé el control de versiones con Git y GitHub, y validé los despliegues con pruebas automatizadas generadas y ejecutadas con apoyo de IA</li>
                         </ul>
+                    </article>
+                </li>
+
+                <li class="relative pl-8">
+                    <span class="absolute -left-[9px] top-2 w-[17px] h-[17px] rounded-full bg-amber ring-4 ring-amber/20"
+                        aria-hidden="true"></span>
+
+                    <article class="bg-surface border border-line rounded-2xl p-6 shadow-card">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-1">
+                            <div>
+                                <h3 class="font-display font-semibold text-xl">Desarrollador Web Backend (Servicio Social)</h3>
+                                <p class="text-amber font-medium">Bucks Containers</p>
+                            </div>
+                            <time
+                                class="font-mono text-xs uppercase tracking-wider text-ink-muted bg-surface-2 border border-line px-2.5 py-1 rounded-md shrink-0 self-start">
+                                Sep 2025 — Mar 2026</time>
+                        </div>
+                        <p class="text-ink-muted mt-3 mb-5">
+                            Durante mi servicio social desarrollé el sitio de catálogo y ventas de la empresa, con arquitectura
+                            cliente-servidor.
+                        </p>
+                        <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2.5 text-ink-muted text-[15px]">
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-amber text-[18px] mt-0.5"
+                                    aria-hidden="true">check</span>Desarrollé el sitio de catálogo y ventas de la empresa con Django y PostgreSQL, con arquitectura cliente-servidor</li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-amber text-[18px] mt-0.5"
+                                    aria-hidden="true">check</span>Diseñé e implementé una API REST para integrar servicios</li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-amber text-[18px] mt-0.5"
+                                    aria-hidden="true">check</span>Modelé y gestioné la base de datos relacional (PostgreSQL), incluyendo operaciones CRUD</li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-amber text-[18px] mt-0.5"
+                                    aria-hidden="true">check</span>Automaticé la verificación de correos de clientes en bases de hasta 500 registros cada una, una tarea que se hacía a mano, para depurar contactos no vigentes</li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-amber text-[18px] mt-0.5"
+                                    aria-hidden="true">check</span>Automaticé la organización y depuración de la base de datos con scripts en Python</li>
+                            <li class="flex items-start gap-2"><span
+                                    class="material-symbols-outlined text-amber text-[18px] mt-0.5"
+                                    aria-hidden="true">check</span>Desplegué el sitio en producción en un VPS con Linux y configuré el entorno del servidor</li>
+                        </ul>
+                    </article>
+                </li>
+
+                <!-- Soporte Técnico (Colapsable) -->
+                <li class="relative pl-8">
+                    <span class="absolute -left-[7px] top-3 w-[13px] h-[13px] rounded-full bg-bg border-2 border-line-strong"
+                        aria-hidden="true"></span>
+
+                    <button id="soporte-toggle" type="button" aria-expanded="false" aria-controls="soporte-content"
+                        class="w-full text-left group bg-surface/60 hover:bg-surface border border-line hover:border-line-strong rounded-2xl p-5 transition-colors">
+                        <span class="flex items-center justify-between gap-4">
+                            <span class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-ink-muted" aria-hidden="true">build</span>
+                                <span class="font-display font-semibold text-lg text-ink">Experiencia en soporte
+                                    técnico</span>
+                                <span class="hidden sm:inline font-mono text-xs text-ink-dim">3 puestos · 2023–2025</span>
+                            </span>
+                            <span id="soporte-chevron"
+                                class="material-symbols-outlined text-ink-muted group-hover:text-amber transition-transform duration-300"
+                                aria-hidden="true">expand_more</span>
+                        </span>
+                        <span class="block text-ink-muted text-[15px] mt-2 pl-9">
+                            Mi experiencia en soporte me dio bases sólidas en resolución de problemas, sistemas e
+                            infraestructura tecnológica.
+                        </span>
+                    </button>
+
+                    <div id="soporte-content" class="collapse-grid">
+                        <div>
+                            <div class="grid gap-4 pt-4">
+                                <article class="border border-line rounded-2xl p-5">
+                                    <div class="flex flex-col sm:flex-row sm:justify-between gap-2 mb-3">
+                                        <div>
+                                            <h3 class="font-display font-semibold text-lg">Asistente de Soporte Técnico</h3>
+                                            <p class="text-ink-muted text-sm">Consorcio GDI · CDMX</p>
+                                        </div>
+                                        <time
+                                            class="font-mono text-xs uppercase tracking-wider text-ink-muted self-start">Ene
+                                            2025 — Sep 2025</time>
+                                    </div>
+                                    <ul class="space-y-1.5 text-ink-muted text-[15px] list-disc pl-5 marker:text-ember">
+                                        <li>Di soporte remoto y presencial (AnyDesk, TeamViewer) a 30–40 usuarios en 2 sitios, con hasta 10 incidencias al día de hardware, software y red</li>
+                                        <li>Apoyé en la administración de routers, switches, módems, repetidores, conmutador y CCTV (Ubiquiti, TP-Link), e hice cableado y ponchado de red</li>
+                                        <li>Di mantenimiento a equipos de cómputo: formateo y reinstalación, diagnóstico y reemplazo de piezas, instalación de software y control de licencias, antivirus y limpieza de malware, e impresoras</li>
+                                        <li>Realicé respaldos y recuperación de información, preparé equipos para personal nuevo y capacité a usuarios</li>
+                                        <li>Participé en la renovación de equipos de cómputo y en su cotización y compra, y traté con proveedores y garantías</li>
+                                        <li>Creé manuales y procedimientos que mejoraron la organización del área, y registré incidencias e inventario tecnológico en Excel</li>
+                                        <li>Trabajé con Microsoft Office y Aspel COI y NOI, y me encargué de la administración de correos electrónicos</li>
+                                    </ul>
+                                </article>
+
+                                <article class="border border-line rounded-2xl p-5">
+                                    <div class="flex flex-col sm:flex-row sm:justify-between gap-2 mb-3">
+                                        <div>
+                                            <h3 class="font-display font-semibold text-lg">Auxiliar de Sistemas</h3>
+                                            <p class="text-ink-muted text-sm">Hotel Century Reforma · CDMX</p>
+                                        </div>
+                                        <time
+                                            class="font-mono text-xs uppercase tracking-wider text-ink-muted self-start">Ago
+                                            2024 — Ene 2025</time>
+                                    </div>
+                                    <ul class="space-y-1.5 text-ink-muted text-[15px] list-disc pl-5 marker:text-ember">
+                                        <li>Di soporte a hasta 50 usuarios y a los sistemas internos de un hotel con operación 24/7, con guardias y urgencias, atendiendo 10–20 incidencias al día</li>
+                                        <li>Mejoré la cobertura de wifi y reduje las caídas de red configurando routers, switches, módems y repetidores Ubiquiti, e hice cableado y ponchado de red</li>
+                                        <li>Di mantenimiento a equipos e impresoras (formateo, reemplazo de piezas, software y antivirus), preparé equipos para personal nuevo y realicé respaldos y recuperación de información</li>
+                                        <li>Me encargué de las cámaras de CCTV con DVR Dahua y de la telefonía y extensiones del conmutador, y creé un calendario de mantenimiento de equipos</li>
+                                    </ul>
+                                </article>
+
+                                <article class="border border-line rounded-2xl p-5">
+                                    <div class="flex flex-col sm:flex-row sm:justify-between gap-2 mb-3">
+                                        <div>
+                                            <h3 class="font-display font-semibold text-lg">Mesa de Ayuda (Help Desk)</h3>
+                                            <p class="text-ink-muted text-sm">Wise Interactions · CDMX</p>
+                                        </div>
+                                        <time
+                                            class="font-mono text-xs uppercase tracking-wider text-ink-muted self-start">Nov
+                                            2023 — Ago 2024</time>
+                                    </div>
+                                    <ul class="space-y-1.5 text-ink-muted text-[15px] list-disc pl-5 marker:text-ember">
+                                        <li>Resolví 15–20 tickets al día en osTicket para 50–60 usuarios, de forma remota (AnyDesk) y presencial, con metas de tiempo de respuesta y solución</li>
+                                        <li>Instalé Windows y Linux con USB booteables, imágenes y clonación en hasta 10 equipos al mes, y creé guías de soporte</li>
+                                        <li>Di mantenimiento a equipos (diagnóstico y reemplazo de piezas, software y licencias, antivirus, impresoras), realicé respaldos y recuperación de información, hice cableado y ponchado de red, y traté con proveedores y garantías</li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
                     </div>
-
-                </div>
-            </div>
-
-            <!-- 🖥️ Soporte Técnico (Colapsable) -->
-            <div>
-                <button
-                    onclick="const content = document.getElementById('soporte-content'); const chevron = document.getElementById('soporte-chevron'); content.classList.toggle('max-h-0'); content.classList.toggle('max-h-[2000px]'); content.classList.toggle('opacity-0'); content.classList.toggle('opacity-100'); chevron.classList.toggle('rotate-180');"
-                    class="w-full cursor-pointer group">
-                    <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-tertiary" data-icon="build">build</span>
-                            <h3
-                                class="font-headline-sm text-headline-sm text-tertiary group-hover:text-tertiary-fixed transition-colors">
-                                Experiencia en Soporte Técnico</h3>
-                        </div>
-                        <span id="soporte-chevron"
-                            class="material-symbols-outlined text-tertiary transition-transform duration-300"
-                            data-icon="expand_more">expand_more</span>
-                    </div>
-                    <p class="text-body-md font-body-md text-on-surface-variant mb-4 pl-7 text-left">
-                        Aunque actualmente estoy enfocado en desarrollo backend, mi experiencia en soporte técnico me
-                        permitió desarrollar habilidades sólidas en resolución de problemas, sistemas y trabajo con
-                        infraestructura tecnológica.
-                    </p>
-                </button>
-
-                <div id="soporte-content"
-                    class="max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out">
-
-                    <div
-                        class="space-y-8 relative before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[1px] before:bg-outline-variant pt-2">
-
-                        <!-- Consorcio GDI -->
-                        <div class="relative pl-10">
-                            <div
-                                class="absolute left-0 top-1.5 w-6 h-6 bg-background border-2 border-tertiary rounded-full">
-                            </div>
-                            <div class="flex flex-col md:flex-row md:justify-between items-start mb-1">
-                                <h3 class="font-headline-sm text-headline-sm text-on-surface">Asistente de Soporte
-                                    Técnico</h3>
-                                <span
-                                    class="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest bg-surface-container-high px-2 py-0.5 rounded">Ene
-                                    2025 — Sep 2025</span>
-                            </div>
-                            <p class="font-label-md text-label-md text-tertiary mb-2">Consorcio GDI · CDMX</p>
-                            <ul class="space-y-1.5 text-body-md font-body-md text-on-surface-variant">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-tertiary mt-1">·</span>
-                                    Resolución de incidencias en hardware, software y red
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-tertiary mt-1">·</span>
-                                    Soporte técnico a usuarios de forma remota y presencial
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-tertiary mt-1">·</span>
-                                    Configuración y mantenimiento de equipos de cómputo
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-tertiary mt-1">·</span>
-                                    Administración básica de infraestructura y dispositivos de red
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-tertiary mt-1">·</span>
-                                    Gestión de incidencias y control de inventario tecnológico
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Hotel Century Reforma -->
-                        <div class="relative pl-10">
-                            <div
-                                class="absolute left-0 top-1.5 w-6 h-6 bg-background border-2 border-outline rounded-full">
-                            </div>
-                            <div class="flex flex-col md:flex-row md:justify-between items-start mb-1">
-                                <h3 class="font-headline-sm text-headline-sm text-on-surface">Auxiliar de Sistemas</h3>
-                                <span
-                                    class="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest bg-surface-container-high px-2 py-0.5 rounded">Ago
-                                    2024 — Ene 2025</span>
-                            </div>
-                            <p class="font-label-md text-label-md text-tertiary mb-2">Hotel Century Reforma · CDMX</p>
-                            <ul class="space-y-1.5 text-body-md font-body-md text-on-surface-variant">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-tertiary mt-1">·</span>
-                                    Mantenimiento y configuración de equipos de cómputo
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-tertiary mt-1">·</span>
-                                    Apoyo en la administración de red interna
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-tertiary mt-1">·</span>
-                                    Configuración de dispositivos de red y sistemas CCTV
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-tertiary mt-1">·</span>
-                                    Resolución de incidencias técnicas
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Wise Interactions -->
-                        <div class="relative pl-10">
-                            <div
-                                class="absolute left-0 top-1.5 w-6 h-6 bg-background border-2 border-outline rounded-full">
-                            </div>
-                            <div class="flex flex-col md:flex-row md:justify-between items-start mb-1">
-                                <h3 class="font-headline-sm text-headline-sm text-on-surface">Mesa de Ayuda (Help Desk)
-                                </h3>
-                                <span
-                                    class="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest bg-surface-container-high px-2 py-0.5 rounded">Nov
-                                    2023 — Ago 2024</span>
-                            </div>
-                            <p class="font-label-md text-label-md text-tertiary mb-2">Wise Interactions · CDMX</p>
-                            <ul class="space-y-1.5 text-body-md font-body-md text-on-surface-variant">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-tertiary mt-1">·</span>
-                                    Gestión y resolución de tickets de soporte técnico
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-tertiary mt-1">·</span>
-                                    Atención a usuarios en incidencias de hardware y software
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-tertiary mt-1">·</span>
-                                    Instalación y configuración de sistemas operativos
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-tertiary mt-1">·</span>
-                                    Soporte técnico remoto y presencial
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
+                </li>
+            </ol>
         </section>
 
         <!-- ==================== PROYECTOS DESTACADOS ==================== -->
-        <section class="mb-section-gap" id="proyectos">
-            <h2 class="font-headline-md text-headline-md text-on-surface mb-8 flex items-center gap-3">
-                <span class="w-8 h-[2px] bg-primary"></span> Proyectos Destacados
-            </h2>
+        <section id="proyectos" aria-labelledby="proyectos-title" class="mb-28 reveal">
+            <header class="mb-10">
+                <p class="font-mono text-xs uppercase tracking-[0.2em] text-amber mb-2">03 — Proyectos</p>
+                <h2 id="proyectos-title" class="font-display font-semibold text-3xl md:text-4xl tracking-tight">
+                    Proyectos destacados</h2>
+            </header>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <!-- Proyecto 1: API de Autenticación con JWT -->
-                <div
-                    class="group bg-surface-container border border-outline-variant rounded-xl overflow-hidden hover:border-primary/50 transition-all">
-                    <div class="h-40 bg-surface-variant relative overflow-hidden">
-                        <img alt="Backend Auth JWT"
-                            class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500"
-                            data-alt="Captura de pantalla de la interfaz de inicio de sesión" src="LOGIN.png" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+                <article
+                    class="group relative flex flex-col bg-surface border border-line rounded-2xl overflow-hidden hover:border-amber/50 hover:-translate-y-1 transition duration-300 shadow-card">
+                    <div class="aspect-[16/9] bg-surface-2 relative overflow-hidden">
+                        <img alt="Pantalla de inicio de sesión del proyecto API Autenticación JWT"
+                            class="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-500"
+                            src="LOGIN.png" loading="lazy" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/10 to-transparent"
+                            aria-hidden="true"></div>
                     </div>
-                    <div class="p-5 space-y-3">
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface">API Autenticación JWT</h3>
-                        <p class="text-body-md font-body-md text-on-surface-variant line-clamp-2">Sistema completo de
-                            inicio de sesión y registro con protección de rutas.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="text-[10px] font-bold uppercase tracking-wider text-primary-fixed-dim bg-primary-container/20 px-2 py-0.5 rounded">Node.js</span>
-                            <span
-                                class="text-[10px] font-bold uppercase tracking-wider text-primary-fixed-dim bg-primary-container/20 px-2 py-0.5 rounded">MongoDB</span>
-                            <span
-                                class="text-[10px] font-bold uppercase tracking-wider text-primary-fixed-dim bg-primary-container/20 px-2 py-0.5 rounded">JWT</span>
-                        </div>
-                        <a class="inline-flex items-center gap-2 text-primary hover:text-primary-fixed transition-colors text-label-md font-label-md pt-2"
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="font-display font-semibold text-xl">API Autenticación JWT</h3>
+                        <p class="text-ink-muted mt-2 flex-1">Sistema completo de inicio de sesión y registro con
+                            protección de rutas.</p>
+                        <ul class="flex flex-wrap gap-2 mt-4" aria-label="Tecnologías">
+                            <li class="font-mono text-xs text-amber-soft bg-amber/10 border border-amber/20 px-2 py-1 rounded-md">Node.js</li>
+                            <li class="font-mono text-xs text-amber-soft bg-amber/10 border border-amber/20 px-2 py-1 rounded-md">MongoDB</li>
+                            <li class="font-mono text-xs text-amber-soft bg-amber/10 border border-amber/20 px-2 py-1 rounded-md">JWT</li>
+                        </ul>
+                        <a class="mt-5 inline-flex items-center gap-1.5 text-amber font-medium after:absolute after:inset-0 after:content-['']"
                             href="https://github.com/AlanContrera/backend-auth-jwt" target="_blank"
                             rel="noopener noreferrer">
-                            Ver Código <span class="material-symbols-outlined text-sm"
-                                data-icon="arrow_forward">arrow_forward</span>
+                            Ver código
+                            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform"
+                                aria-hidden="true">arrow_outward</span>
+                            <span class="sr-only">(se abre en una pestaña nueva)</span>
                         </a>
                     </div>
-                </div>
+                </article>
 
                 <!-- Proyecto 2: Portafolio Personal -->
-                <div
-                    class="group bg-surface-container border border-outline-variant rounded-xl overflow-hidden hover:border-primary/50 transition-all">
-                    <div class="h-40 bg-surface-variant relative overflow-hidden">
-                        <img alt="Portafolio Web Personal"
-                            class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500"
-                            src="PORTAFOLIO.png" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+                <article
+                    class="group relative flex flex-col bg-surface border border-line rounded-2xl overflow-hidden hover:border-amber/50 hover:-translate-y-1 transition duration-300 shadow-card">
+                    <div class="aspect-[16/9] bg-surface-2 relative overflow-hidden">
+                        <img alt="Vista del portafolio web personal"
+                            class="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-500"
+                            src="PORTAFOLIO.png" loading="lazy" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/10 to-transparent"
+                            aria-hidden="true"></div>
                     </div>
-                    <div class="p-5 space-y-3">
-                        <h3 class="font-headline-sm text-headline-sm text-on-surface">Portafolio Web Personal</h3>
-                        <p class="text-body-md font-body-md text-on-surface-variant line-clamp-2">Portafolio web
-                            responsivo, optimizado y con diseño en modo oscuro.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="text-[10px] font-bold uppercase tracking-wider text-primary-fixed-dim bg-primary-container/20 px-2 py-0.5 rounded">HTML</span>
-                            <span
-                                class="text-[10px] font-bold uppercase tracking-wider text-primary-fixed-dim bg-primary-container/20 px-2 py-0.5 rounded">Tailwind
-                                CSS</span>
-                            <span
-                                class="text-[10px] font-bold uppercase tracking-wider text-primary-fixed-dim bg-primary-container/20 px-2 py-0.5 rounded">JavaScript</span>
-                        </div>
-                        <a class="inline-flex items-center gap-2 text-primary hover:text-primary-fixed transition-colors text-label-md font-label-md pt-2"
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="font-display font-semibold text-xl">Portafolio Web Personal</h3>
+                        <p class="text-ink-muted mt-2 flex-1">Portafolio web responsivo, accesible y optimizado, con
+                            diseño oscuro.</p>
+                        <ul class="flex flex-wrap gap-2 mt-4" aria-label="Tecnologías">
+                            <li class="font-mono text-xs text-amber-soft bg-amber/10 border border-amber/20 px-2 py-1 rounded-md">HTML</li>
+                            <li class="font-mono text-xs text-amber-soft bg-amber/10 border border-amber/20 px-2 py-1 rounded-md">Tailwind CSS</li>
+                            <li class="font-mono text-xs text-amber-soft bg-amber/10 border border-amber/20 px-2 py-1 rounded-md">JavaScript</li>
+                        </ul>
+                        <a class="mt-5 inline-flex items-center gap-1.5 text-amber font-medium after:absolute after:inset-0 after:content-['']"
                             href="https://github.com/AlanContrera/portafolio" target="_blank" rel="noopener noreferrer">
-                            Ver Código <span class="material-symbols-outlined text-sm"
-                                data-icon="arrow_forward">arrow_forward</span>
+                            Ver código
+                            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform"
+                                aria-hidden="true">arrow_outward</span>
+                            <span class="sr-only">(se abre en una pestaña nueva)</span>
                         </a>
                     </div>
-                </div>
-
+                </article>
             </div>
         </section>
 
         <!-- ==================== FORMACIÓN / EDUCACIÓN ==================== -->
-        <section class="mb-section-gap">
-            <h2 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3">
-                <span class="w-8 h-[2px] bg-primary"></span> Formación
-            </h2>
+        <section aria-labelledby="formacion-title" class="mb-28 reveal">
+            <header class="mb-10">
+                <p class="font-mono text-xs uppercase tracking-[0.2em] text-amber mb-2">04 — Formación</p>
+                <h2 id="formacion-title" class="font-display font-semibold text-3xl md:text-4xl tracking-tight">
+                    Educación y certificaciones</h2>
+            </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <article class="flex gap-4 bg-surface border border-line rounded-2xl p-6">
+                    <span class="grid place-items-center w-11 h-11 rounded-xl bg-surface-2 text-amber shrink-0">
+                        <span class="material-symbols-outlined" aria-hidden="true">school</span>
+                    </span>
+                    <div>
+                        <h3 class="font-display font-semibold text-lg">Ing. Sistemas Computacionales</h3>
+                        <p class="text-ink-muted text-sm mt-1">Universidad Insurgentes · Titulado el 2 de julio de 2026</p>
+                    </div>
+                </article>
 
-                <!-- Educación -->
-                <div class="bg-surface-container-high p-5 rounded-lg border border-outline-variant">
-                    <span class="material-symbols-outlined text-primary mb-3" data-icon="school">school</span>
-                    <h4 class="font-headline-sm text-headline-sm text-on-surface">Ing. Sistemas Computacionales
-                    </h4>
-                    <p class="font-label-md text-label-md text-on-surface-variant">Universidad Insurgentes
-                    </p>
-                </div>
+                <article class="flex gap-4 bg-surface border border-line rounded-2xl p-6">
+                    <span class="grid place-items-center w-11 h-11 rounded-xl bg-surface-2 text-amber shrink-0">
+                        <span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>
+                    </span>
+                    <div>
+                        <h3 class="font-display font-semibold text-lg">Python Programming Fundamentals</h3>
+                        <p class="text-ink-muted text-sm mt-1">Coursera / Microsoft · Certificación profesional</p>
+                    </div>
+                </article>
 
-                <!-- Certificación -->
-                <div class="bg-surface-container-high p-5 rounded-lg border border-outline-variant">
-                    <span class="material-symbols-outlined text-primary mb-3" data-icon="verified">verified</span>
-                    <h4 class="font-headline-sm text-headline-sm text-on-surface">Python Programming Fundamentals</h4>
-                    <p class="font-label-md text-label-md text-on-surface-variant">Coursera / Microsoft</p>
-                    <p class="text-body-md font-body-md text-outline mt-1 italic">Certificación Profesional</p>
-                </div>
+                <article class="flex gap-4 bg-surface border border-line rounded-2xl p-6">
+                    <span class="grid place-items-center w-11 h-11 rounded-xl bg-surface-2 text-amber shrink-0">
+                        <span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>
+                    </span>
+                    <div>
+                        <h3 class="font-display font-semibold text-lg">Soporte Técnico</h3>
+                        <p class="text-ink-muted text-sm mt-1">Coursera / Google · Certificación profesional</p>
+                    </div>
+                </article>
             </div>
         </section>
 
+        <!-- ==================== CONTACTO ==================== -->
+        <section id="contacto" aria-labelledby="contacto-title" class="reveal">
+            <div
+                class="relative overflow-hidden rounded-3xl border border-amber/30 bg-surface px-6 py-14 sm:px-12 text-center shadow-card">
+                <div class="absolute left-1/2 -translate-x-1/2 -top-40 w-[28rem] h-[28rem] rounded-full border-[18px] border-amber/15 blur-sm"
+                    aria-hidden="true"></div>
+                <div class="absolute left-1/2 -translate-x-1/2 -top-32 w-80 h-80 rounded-full bg-amber/15 blur-3xl"
+                    aria-hidden="true"></div>
 
+                <div class="relative">
+                    <p class="font-mono text-xs uppercase tracking-[0.2em] text-amber mb-3">05 — Contacto</p>
+                    <h2 id="contacto-title"
+                        class="font-display font-bold text-3xl sm:text-4xl md:text-5xl tracking-tight max-w-2xl mx-auto">
+                        ¿Construimos algo juntos?</h2>
+                    <p class="text-ink-muted text-lg max-w-xl mx-auto mt-4">
+                        Estoy abierto a nuevas oportunidades como desarrollador web full stack. Respondo rápido por
+                        correo o WhatsApp.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-3 mt-8">
+                        <a href="mailto:giovannicontre24@gmail.com"
+                            class="inline-flex items-center gap-2 bg-amber text-on-amber h-12 px-6 rounded-full font-semibold hover:bg-amber-soft active:scale-95 transition">
+                            <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+                            Escríbeme
+                        </a>
+                        <button type="button" onclick="copyEmail()"
+                            class="inline-flex items-center gap-2 h-12 px-6 rounded-full font-semibold text-ink border border-line-strong hover:border-amber hover:text-amber active:scale-95 transition">
+                            <span class="material-symbols-outlined" aria-hidden="true">content_copy</span>
+                            Copiar correo
+                        </button>
+                        <a href="https://wa.me/525525319587" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 h-12 px-6 rounded-full font-semibold text-ink border border-line-strong hover:border-amber hover:text-amber active:scale-95 transition">
+                            <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- ==================== PIE DE PÁGINA ==================== -->
-    <footer class="bg-[#0F172A] w-full bottom-0 border-t border-slate-800">
-        <div class="max-w-[800px] mx-auto py-12 px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-
-            <!-- Marca -->
-            <div class="flex flex-col gap-2">
-                <span
-                    class="text-slate-200 font-semibold font-['Space_Grotesk'] text-xs uppercase tracking-widest">ACportafolio</span>
-                <span class="text-slate-500 font-['Space_Grotesk'] text-xs uppercase tracking-widest">© 2026 Diseñado
-                    para el Rendimiento</span>
-            </div>
-
-            <!-- Enlaces del pie de página -->
-            <div class="flex gap-6">
-                <a class="text-slate-500 hover:text-slate-200 transition-colors font-['Space_Grotesk'] text-xs uppercase tracking-widest"
-                    target="_blank" rel="noopener noreferrer" href="https://wa.me/525525319587">WhatsApp</a>
-
-                <button
-                    class="text-slate-500 hover:text-slate-200 transition-colors font-['Space_Grotesk'] text-xs uppercase tracking-widest cursor-pointer"
-                    onclick="copyEmail()">CORREO</button>
-
-                <a class="text-slate-500 hover:text-slate-200 transition-colors font-['Space_Grotesk'] text-xs uppercase tracking-widest"
-                    href="https://github.com/AlanContrera">GitHub</a>
-
-                <a class="text-slate-500 hover:text-slate-200 transition-colors font-['Space_Grotesk'] text-xs uppercase tracking-widest"
-                    href="https://www.linkedin.com/in/alan-giovanni-contreras-avila-6a70283a6" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a>
-            </div>
-
+    <footer class="border-t border-line">
+        <div
+            class="max-w-page mx-auto py-10 px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+            <p class="text-ink-dim">© 2026 Alan Contreras</p>
+            <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                <li><a class="text-ink-muted hover:text-amber transition-colors" href="https://github.com/AlanContrera"
+                        target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a class="text-ink-muted hover:text-amber transition-colors"
+                        href="https://www.linkedin.com/in/alan-giovanni-contreras-avila-6a70283a6" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a class="text-ink-muted hover:text-amber transition-colors" href="https://wa.me/525525319587"
+                        target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                <li><a class="text-ink-muted hover:text-amber transition-colors" href="#sobre-mi">Volver arriba ↑</a></li>
+            </ul>
         </div>
     </footer>
 
     <!-- Toast de Notificación -->
-    <div id="toast"
-        class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-surface-container-high border border-outline-variant text-on-surface px-6 py-3 rounded-full shadow-lg font-label-md transition-all duration-300 opacity-0 translate-y-4 pointer-events-none z-50 flex items-center gap-2">
-        <span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
-        <span>¡Correo copiado al portapapeles!</span>
+    <div id="toast" role="status" aria-live="polite"
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-surface-2 border border-amber/40 text-ink px-5 py-3 rounded-full shadow-2xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none z-50 flex items-center gap-2 text-sm">
+        <span class="material-symbols-outlined text-amber" aria-hidden="true">check_circle</span>
+        <span id="toast-text">¡Correo copiado al portapapeles!</span>
     </div>
 
     <script>
-        // Función para copiar correo
+        const EMAIL = 'giovannicontre24@gmail.com';
+
+        // Copiar correo (si el portapapeles no está disponible, abre el cliente de correo)
+        let toastTimer;
         function copyEmail() {
-            navigator.clipboard.writeText('giovannicontre24@gmail.com').then(() => {
+            if (!navigator.clipboard) {
+                window.location.href = 'mailto:' + EMAIL;
+                return;
+            }
+            navigator.clipboard.writeText(EMAIL).then(() => {
                 const toast = document.getElementById('toast');
                 toast.classList.remove('opacity-0', 'translate-y-4');
-                toast.classList.add('opacity-100', 'translate-y-0');
-
-                setTimeout(() => {
-                    toast.classList.remove('opacity-100', 'translate-y-0');
-                    toast.classList.add('opacity-0', 'translate-y-4');
-                }, 3000);
-            });
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(() => toast.classList.add('opacity-0', 'translate-y-4'), 3000);
+            }, () => { window.location.href = 'mailto:' + EMAIL; });
         }
 
-        // Lógica del Menú Hamburguesa para móviles
+        // Menú hamburguesa
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        let isMenuOpen = false;
 
-        function toggleMenu() {
-            isMenuOpen = !isMenuOpen;
-            if (isMenuOpen) {
-                // Abrir menú
-                mobileMenu.classList.remove('max-h-0', 'opacity-0');
-                mobileMenu.classList.add('max-h-64', 'opacity-100');
-                menuIcon.setAttribute('data-icon', 'close');
-                menuIcon.innerText = 'close';
-            } else {
-                // Cerrar menú
-                mobileMenu.classList.remove('max-h-64', 'opacity-100');
-                mobileMenu.classList.add('max-h-0', 'opacity-0');
-                menuIcon.setAttribute('data-icon', 'menu');
-                menuIcon.innerText = 'menu';
-            }
+        function setMenu(open) {
+            mobileMenu.dataset.open = open;
+            menuToggle.setAttribute('aria-expanded', open);
+            menuToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+            menuIcon.textContent = open ? 'close' : 'menu';
         }
 
-        menuToggle.addEventListener('click', toggleMenu);
+        menuToggle.addEventListener('click', () => setMenu(menuToggle.getAttribute('aria-expanded') !== 'true'));
+        document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => setMenu(false)));
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 
-        // Cerrar el menú automáticamente al hacer clic en un enlace
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (isMenuOpen) toggleMenu();
-            });
+        // Acordeón de soporte técnico
+        const soporteToggle = document.getElementById('soporte-toggle');
+        const soporteContent = document.getElementById('soporte-content');
+        const soporteChevron = document.getElementById('soporte-chevron');
+
+        soporteToggle.addEventListener('click', () => {
+            const open = soporteToggle.getAttribute('aria-expanded') !== 'true';
+            soporteToggle.setAttribute('aria-expanded', open);
+            soporteContent.dataset.open = open;
+            soporteChevron.classList.toggle('rotate-180', open);
         });
+
+        // Resaltar la sección activa en la navegación
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('main section[id]');
+
+        const sectionObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                navLinks.forEach(link => {
+                    const active = link.getAttribute('href') === '#' + entry.target.id;
+                    link.toggleAttribute('aria-current', active);
+                    if (active) link.setAttribute('aria-current', 'true');
+                });
+            });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+
+        sections.forEach(section => sectionObserver.observe(section));
+
+        // Aparición de secciones al hacer scroll
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     </script>
 </body>
 
